@@ -14,22 +14,22 @@ document.querySelector('#phone-checkbox')
     isPhoneRequired = !isPhoneRequired
   })
 
-document.querySelector('button[type="submit"]')
-  .addEventListener('click', function(event) {
-    event.preventDefault()
-    const firstNameField = document.getElementById('firstName')
-    const lastNameField = document.getElementById('lastName')
-    const emailField = document.getElementById('email')
-    const textareaField = document.getElementById('open-text-area')
-    const productField = document.getElementById('product')
-    const helpRadio = document.querySelector('input[value="ajuda"]')
-    const emailCheckbox = document.getElementById('email-checkbox')
-    const phoneCheckbox = document.getElementById('phone-checkbox')
-    const fileField = document.querySelector('input[type="file"]')
-    const successMessage = document.querySelector('.success')
-    if (!firstNameField.value || !lastNameField.value || !emailField.value || !textareaField.value) {
-      return showAndHideErrorMessage()
-    }
+// document.querySelector('button[type="submit"]')
+//   .addEventListener('click', function(event) {
+//     event.preventDefault()
+//     const firstNameField = document.getElementById('firstName')
+//     const lastNameField = document.getElementById('lastName')
+//     const emailField = document.getElementById('email')
+//     const textareaField = document.getElementById('open-text-area')
+//     const productField = document.getElementById('product')
+//     const helpRadio = document.querySelector('input[value="ajuda"]')
+//     const emailCheckbox = document.getElementById('email-checkbox')
+//     const phoneCheckbox = document.getElementById('phone-checkbox')
+//     const fileField = document.querySelector('input[type="file"]')
+//     const successMessage = document.querySelector('.success')
+//     if (!firstNameField.value || !lastNameField.value || !emailField.value || !textareaField.value) {
+//       return showAndHideErrorMessage()
+//     }
     if (isPhoneRequired && !phoneField.value) {
       return showAndHideErrorMessage()
     }
