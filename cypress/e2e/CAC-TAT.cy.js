@@ -194,14 +194,20 @@ describe('Central de Atendimento ao Cliente TAT', () => {
       .should('have.value', 'um texto qualquer')
   })
 
-  it.only('faz uma requisição HTTP', () => {
+  it('faz uma requisição HTTP', () => {
     cy.request({
       method: 'GET',
       url: 'https://cac-tat-v3.s3.eu-central-1.amazonaws.com/index.html',
-    }).then((response)=>{
+    }).then((response) => {
       expect(response.status).to.equal(200)
       expect(response.statusText).to.equal('OK')
       expect(response.body).to.include('CAC TAT')
     })
+  })
+
+  it.only('encontre o gato e mude o title para CAT TAT', () => {
+    cy.get('#cat').invoke('show').should('be.visible')
+    cy.get('#title').invoke('text', 'CAT TAT')
+    cy.get('#subtitle').invoke('text', 'Eu ❤️ gatos')
   })
 })
