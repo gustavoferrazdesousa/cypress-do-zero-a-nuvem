@@ -16,7 +16,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.contains('Nome').type('Gustavo')
     cy.contains('Sobrenome').type('Ferraz de Sousa')
     cy.contains('E-mail').type('gustavoferrazdesousa@teste.com')
-    cy.contains('Como podemos te ajudar?').type('Teste de elogio', '{delay,0')
+    cy.contains('Como podemos te ajudar?').type('Teste de elogio', '{delay:0')
     cy.contains('button', 'Enviar').click()
     cy.contains('Mensagem enviada com sucesso').should('be.visible')
 
@@ -31,7 +31,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.contains('Nome').type('Gustavo')
     cy.contains('Sobrenome').type('Ferraz de Sousa')
     cy.contains('E-mail').type('gustavoferrazdesousa.teste.com')
-    cy.contains('Como podemos te ajudar?').type('Teste de elogio', '{delay,0')
+    cy.contains('Como podemos te ajudar?').type('Teste de elogio', '{delay:0')
     cy.contains('button', 'Enviar').click()
     cy.contains('Valide os campos obrigatórios!').should('be.visible')
 
@@ -51,7 +51,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.contains('Sobrenome').type('Ferraz de Sousa')
     cy.contains('E-mail').type('gustavoferrazdesousa@teste.com')
     cy.get('#phone-checkbox').check()
-    cy.contains('Como podemos te ajudar?').type('Teste de elogio', '{delay,0')
+    cy.contains('Como podemos te ajudar?').type('Teste de elogio', '{delay:0')
     cy.contains('button', 'Enviar').click()
     cy.contains('Valide os campos obrigatórios!').should('be.visible')
 
